@@ -1,12 +1,10 @@
 package com.mtsaurus0710.tradinglab.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
-import lombok.ToString;
 
 import java.time.LocalDateTime;
 
-public record UpbitDayCandleDto(
+public record UpbitMinuteCandleDto(
         @JsonProperty("market") String market,
         @JsonProperty("candle_date_time_utc") LocalDateTime candleDateTimeUtc,
         @JsonProperty("candle_date_time_kst") LocalDateTime candleDateTimeKst,
@@ -17,8 +15,6 @@ public record UpbitDayCandleDto(
         @JsonProperty("time_stamp") Long timeStamp,
         @JsonProperty("candle_acc_trade_price") Double candleAccTradePrice,
         @JsonProperty("candle_acc_trade_volume") Double candleAccTradeVolume,
-        @JsonProperty("prev_closing_price") Double prevClosingPrice,
-        @JsonProperty("change_price") Double changePrice,
-        @JsonProperty("change_rate") Double changeRate
-) {
+        @JsonProperty("unit") int unit
+        ) {
 }
