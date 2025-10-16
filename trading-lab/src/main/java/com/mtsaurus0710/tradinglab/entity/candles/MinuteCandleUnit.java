@@ -1,4 +1,4 @@
-package com.mtsaurus0710.tradinglab.entity;
+package com.mtsaurus0710.tradinglab.entity.candles;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
